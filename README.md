@@ -45,7 +45,11 @@ A peer-to-peer file sharing system built using **raw Java sockets and multithrea
 Check out my latest technical deep dives here:
 👉 **[Gowtham Writes](https://github.com/Gowtham-beep/Gowtham-Writes)**
 
-**Latest Post:** [I built a message broker from scratch. Here's what broke me.](https://github.com/Gowtham-beep/Gowtham-Writes/blob/main/mini-kafka.md)
+**Latest Post:** [I Built Kafka's Storage Engine From Scratch. Here's Every Decision I Made](storage-engine.md)
+
+**Previous Posts:**
+
+- [I built a message broker from scratch. Here's what broke me.](mini-kafka.md)
 
 ---
 
