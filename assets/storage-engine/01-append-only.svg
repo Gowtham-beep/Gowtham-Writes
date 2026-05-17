@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" role="img" aria-labelledby="title desc">
+  <title id="title">Append-only log crash recovery sketch</title>
+  <desc id="desc">A scribble-style file showing an in-place update tearing a record, contrasted with an append-only log isolating corruption at the tail.</desc>
+  <rect width="900" height="260" fill="#fffaf2"/>
+  <g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M56 62c58-8 120-7 176 1 26 4 47 13 67 29 14 11 24 23 32 40"/>
+    <path d="M54 62c-5 40-2 84 4 125 79 16 180 14 261-2 7-42 8-82 2-123"/>
+    <path d="M84 112c35-5 63-4 97 0"/>
+    <path d="M183 111c31 12 60 22 92 30"/>
+    <path d="M83 151c37 8 73 10 111 4"/>
+    <path d="M190 153c34-15 60-23 93-22"/>
+    <path d="M161 88c-9 31-7 61 4 94"/>
+    <path d="M362 127c40 3 66 1 105-1"/>
+    <path d="M442 105c10 8 19 15 29 23-10 9-20 17-32 25"/>
+    <path d="M520 72c78-8 160-7 238 0 9 31 10 73 6 112-78 14-165 13-244-1-7-37-7-74 0-111z"/>
+    <path d="M552 124c33-3 65-3 97 0"/>
+    <path d="M650 124c32 0 62 4 93 14"/>
+    <path d="M746 138c16 5 29 12 43 22"/>
+    <path d="M790 161c6-11 11-22 14-34"/>
+    <path d="M802 126c14 7 26 15 38 25"/>
+    <path d="M829 129c-9 14-17 29-27 43"/>
+  </g>
+  <g font-family="monospace" font-size="22" fill="#111827">
+    <text x="83" y="217">in-place update tears the middle</text>
+    <text x="545" y="217">append-only isolates the tail</text>
+  </g>
+  <g fill="none" stroke="#ef4444" stroke-width="5" stroke-linecap="round">
+    <path d="M178 95c-12 22-3 36-17 56"/>
+    <path d="M155 111c12 15 23 28 35 43"/>
+    <path d="M775 124c25 7 47 18 65 34"/>
+  </g>
+</svg>

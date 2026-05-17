@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" role="img" aria-labelledby="title desc">
+  <title id="title">Segmented log sketch</title>
+  <desc id="desc">A scribble-style infinite log split into sealed segment files with zero-padded base offsets.</desc>
+  <rect width="900" height="260" fill="#f8fbff"/>
+  <g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M58 98c107-10 212-11 318 1"/>
+    <path d="M57 98c-4 30-2 63 3 94 104 11 210 11 316 0 5-31 6-63 0-94"/>
+    <path d="M376 98c95-8 189-8 284 0"/>
+    <path d="M376 98c-4 31-3 63 2 94 94 10 188 10 283 0 6-31 5-63-1-94"/>
+    <path d="M660 98c59-6 119-5 179 2"/>
+    <path d="M660 98c-4 31-4 63 2 94 59 8 117 8 176 0 6-31 6-62 1-92"/>
+    <path d="M198 92c-7 35-7 70 1 106"/>
+    <path d="M518 92c-7 35-7 70 1 106"/>
+    <path d="M63 54c236-21 480-20 717 1"/>
+    <path d="M782 55c18 5 33 13 47 27"/>
+    <path d="M809 42c6 14 13 27 22 40"/>
+  </g>
+  <g font-family="monospace" font-size="19" fill="#111827">
+    <text x="89" y="139">00000000000000000000.log</text>
+    <text x="405" y="139">00000000001073741824.log</text>
+    <text x="689" y="139">active</text>
+    <text x="88" y="220">sealed archives make deletion cheap</text>
+  </g>
+  <g fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round">
+    <path d="M98 162c63 11 127 11 190 0"/>
+    <path d="M409 162c64 10 126 10 189 0"/>
+  </g>
+</svg>

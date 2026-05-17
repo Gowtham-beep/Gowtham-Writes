@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" role="img" aria-labelledby="title desc">
+  <title id="title">Sparse index sketch</title>
+  <desc id="desc">A scribble-style sparse index jumping to an anchor and scanning forward through length-prefixed records.</desc>
+  <rect width="900" height="260" fill="#fffdf7"/>
+  <g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M70 82c173-13 344-12 518 0"/>
+    <path d="M70 82c-4 31-3 61 3 91 171 11 342 12 515 0 6-31 6-61 0-91"/>
+    <path d="M114 82c-7 30-6 61 1 91"/>
+    <path d="M162 82c-6 30-6 61 0 91"/>
+    <path d="M211 82c-6 30-6 61 0 91"/>
+    <path d="M260 82c-6 30-6 61 0 91"/>
+    <path d="M309 82c-6 30-6 61 0 91"/>
+    <path d="M358 82c-6 30-6 61 0 91"/>
+    <path d="M407 82c-6 30-6 61 0 91"/>
+    <path d="M456 82c-6 30-6 61 0 91"/>
+    <path d="M505 82c-6 30-6 61 0 91"/>
+    <path d="M654 54c53-7 106-7 160 0 7 47 7 96 0 143-53 8-107 8-160 0-7-48-7-95 0-143z"/>
+    <path d="M683 85c35-4 69-4 104 0"/>
+    <path d="M682 125c35-4 69-4 104 0"/>
+    <path d="M682 165c35-4 69-4 104 0"/>
+    <path d="M728 91c-7 11-7 22 0 33"/>
+    <path d="M728 131c-7 11-7 22 0 33"/>
+  </g>
+  <g fill="#2563eb">
+    <circle cx="114" cy="128" r="8"/>
+    <circle cx="309" cy="128" r="8"/>
+    <circle cx="505" cy="128" r="8"/>
+  </g>
+  <g fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M735 82c-46 0-92 19-127 54"/>
+    <path d="M610 136c12 0 24 0 35 2"/>
+    <path d="M609 136c4-10 8-20 15-29"/>
+    <path d="M506 128c18 1 35 1 52 0"/>
+  </g>
+  <g font-family="monospace" font-size="20" fill="#111827">
+    <text x="91" y="215">anchor, then count forward through records</text>
+    <text x="673" y="226">.index</text>
+  </g>
+</svg>

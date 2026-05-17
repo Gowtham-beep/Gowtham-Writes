@@ -12,6 +12,8 @@ What started as a simple file-writer quickly turned into a war against the Opera
 
 ## Section 1: The Illusion of In-Place Updates (Why Append-Only?)
 
+![Scribble illustration of append-only recovery isolating corruption at the tail](assets/storage-engine/01-append-only.svg)
+
 The question that finally cracked it open for me wasn't about performance. It was about failure: **What happens if the JVM crashes halfway through a write?**
 
 ### The Frankenstein Record
@@ -57,6 +59,8 @@ Append-only couldn't save me from the Operating System's thread scheduler. That 
 
 ## Section 2: Segmentation — When One File Isn't Enough
 
+![Scribble illustration of an infinite log split into sealed segment files](assets/storage-engine/02-segments.svg)
+
 The elegance of the append-only log felt like a revelation, but clarity is usually just a bridge to a brand new kind of confusion.
 
 I had my core primitive: a single, indestructible file where bytes are only ever added to the tail. But as I started sketching out the memory management for the broker, the reality of a single, infinite file hit me. It creates three massive, concrete engineering problems:
@@ -100,6 +104,8 @@ With the physical storage sliced, sealed, and searchable, the disk architecture 
 ---
 
 ## Section 3: The Sparse Index and the Architecture of Zero-Allocation
+
+![Scribble illustration of sparse index anchors jumping into a log segment](assets/storage-engine/03-sparse-index.svg)
 
 With the 1 Gigabyte `MappedByteBuffer` fully implemented and the rotation logic handling the files, the storage engine could theoretically handle unbounded data. But a log isn't a black hole; it's a pipe. Data has to come out as fast as it goes in.
 
@@ -167,6 +173,8 @@ This is the rule of ultra-low-latency systems like Aeron and the LMAX Disruptor:
 
 ## Section 4: CRC32 — What Append-Only Cannot Catch
 
+![Scribble illustration of ghost payload bytes caught by a CRC32 checksum](assets/storage-engine/04-crc32.svg)
+
 By the time I finished the sparse index, I felt invincible. The architecture was coming together beautifully. Between the zero-allocation routing and the append-only durability, I thought I had built an indestructible storage primitive.
 
 If the server crashed, the append-only design would save me. If a write was interrupted, the file would simply end abruptly (EOF). I would read the 4-byte length prefix, realize there weren't enough payload bytes left in the file to satisfy it, and instantly detect the torn write. Structural corruption was solved.
@@ -224,6 +232,8 @@ The checksum that detects silent memory corruption at read time is the exact sam
 ---
 
 ## Section 5: The Concurrency Design (Or, How I Learned to Stop Worrying and Love CAS)
+
+![Scribble illustration of producer threads reserving byte ranges with CAS](assets/storage-engine/05-concurrency.svg)
 
 With the sparse index mapping my logical offsets and CRC32 protecting the payloads, I had a bulletproof storage engine—as long as exactly one thread was using it.
 
@@ -309,6 +319,8 @@ With the threads perfectly orchestrated, the math holding steady, and the disk s
 ---
 
 ## Closing: What This Taught Me
+
+![Scribble illustration of a flaky concurrent test failing at different offsets](assets/storage-engine/06-flaky-test.svg)
 
 When I started this project, I just wanted to understand the mechanics of an append-only log. What I ended up with was a completely rewired mental model of how data actually moves through a computer.
 
