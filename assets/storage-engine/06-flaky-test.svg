@@ -14,10 +14,15 @@
     <path d="M782 167c20 14 35 30 47 50"/>
     <path d="M829 170c-20 15-38 32-54 51"/>
   </g>
-  <g font-family="monospace" font-size="22" fill="#111827">
-    <text x="114" y="125">run 1: PASS</text>
-    <text x="114" y="160">run 2: FAIL at offset 970,898</text>
-    <text x="114" y="195">run 3: FAIL somewhere else</text>
+  <g fill="#f9fbff" stroke="#1f2937" stroke-width="2">
+    <rect x="104" y="96" width="220" height="36" rx="8"/>
+    <rect x="104" y="134" width="495" height="36" rx="8"/>
+    <rect x="104" y="172" width="470" height="36" rx="8"/>
+  </g>
+  <g font-family="monospace" font-weight="700" fill="#111827">
+    <text x="120" y="123" font-size="26">run 1: PASS</text>
+    <text x="120" y="161" font-size="26">run 2: FAIL offset 970,898</text>
+    <text x="120" y="199" font-size="26">run 3: FAIL elsewhere</text>
   </g>
   <g fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round">
     <path d="M414 164c104-7 207-7 310 0"/>

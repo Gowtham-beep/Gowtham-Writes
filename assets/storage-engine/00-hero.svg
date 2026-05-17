@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Kafka storage engine hero sketch</title>
+  <desc id="desc">A scribble-style overview of a mini Kafka storage engine: producer threads, an append-only log, segment files, sparse index anchors, CRC validation, and a flaky concurrent test.</desc>
+  <rect width="1200" height="430" fill="#fffaf2"/>
+  <g fill="none" stroke="#111827" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M74 69c94-16 190-14 285 3 14 48 14 97 0 145-95 16-190 16-285 0-14-49-14-99 0-148z"/>
+    <path d="M117 112c46-7 91-6 137 2"/>
+    <path d="M116 149c68-9 135-8 203 2"/>
+    <path d="M116 187c51-7 103-6 154 2"/>
+    <path d="M395 143c44-2 87-2 131 1"/>
+    <path d="M497 111c13 12 24 23 35 34-13 12-26 23-40 34"/>
+    <path d="M562 73c168-17 336-17 504 0 13 48 13 96 1 144-168 18-336 18-504 0-13-48-13-96-1-144z"/>
+    <path d="M675 73c-10 48-10 96 0 144"/>
+    <path d="M790 73c-10 48-10 96 0 144"/>
+    <path d="M905 73c-10 48-10 96 0 144"/>
+    <path d="M1021 73c-10 48-10 96 0 144"/>
+    <path d="M588 288c122-13 244-12 366 1 11 30 11 62 0 92-122 13-244 13-366 0-11-31-11-63 0-93z"/>
+    <path d="M654 288c-8 31-8 62 0 93"/>
+    <path d="M719 288c-8 31-8 62 0 93"/>
+    <path d="M784 288c-8 31-8 62 0 93"/>
+    <path d="M849 288c-8 31-8 62 0 93"/>
+    <path d="M983 303c35-11 72-10 107 3 14 24 14 51 0 76-35 12-72 13-107 2-14-27-14-54 0-81z"/>
+    <path d="M1009 325c21 18 41 36 62 54"/>
+    <path d="M1071 325c-21 19-42 38-63 57"/>
+    <path d="M220 254c60-9 121-8 181 2 10 31 10 63 0 95-60 10-121 11-181 2-10-33-10-66 0-99z"/>
+    <path d="M247 289c42-5 84-4 126 2"/>
+    <path d="M247 323c42-5 84-4 126 2"/>
+    <path d="M435 305c39 0 77 1 116 3"/>
+    <path d="M522 278c12 10 22 20 32 31-12 11-24 21-37 30"/>
+  </g>
+  <g fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M586 144c36-6 72-6 108 0"/>
+    <path d="M702 144c36-6 72-6 108 0"/>
+    <path d="M817 144c36-6 72-6 108 0"/>
+    <path d="M932 144c36-6 72-6 108 0"/>
+    <circle cx="654" cy="335" r="10"/>
+    <circle cx="784" cy="335" r="10"/>
+    <circle cx="914" cy="335" r="10"/>
+  </g>
+  <g fill="none" stroke="#ef4444" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M997 178c21 8 39 19 55 35"/>
+    <path d="M1048 178c-16 18-32 36-49 54"/>
+    <path d="M100 273c34 40 76 64 126 74"/>
+    <path d="M116 346c32-39 73-63 122-72"/>
+  </g>
+  <g fill="#fffaf2" stroke="#111827" stroke-width="3">
+    <rect x="82" y="232" width="300" height="46" rx="8"/>
+    <rect x="610" y="232" width="440" height="46" rx="8"/>
+    <rect x="225" y="364" width="260" height="42" rx="8"/>
+    <rect x="910" y="384" width="265" height="42" rx="8"/>
+  </g>
+  <g font-family="monospace" font-weight="700" fill="#111827">
+    <text x="105" y="264" font-size="32">producers</text>
+    <text x="635" y="264" font-size="32">segmented log</text>
+    <text x="250" y="394" font-size="28">sparse index</text>
+    <text x="932" y="414" font-size="28">flaky tests</text>
+  </g>
+</svg>

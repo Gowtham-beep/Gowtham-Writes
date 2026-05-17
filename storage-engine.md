@@ -1,5 +1,7 @@
 # I Built Kafka's Storage Engine From Scratch. Here's Every Decision I Made
 
+![Scribble hero illustration of a Kafka-style storage engine with producers, segmented logs, sparse indexes, CRC checks, and flaky tests](assets/storage-engine/00-hero.svg)
+
 I came in knowing Kafka uses an append-only log. I didn't know why.
 
 That gap — using something without understanding it — is what started this project. As a backend developer making the jump into FinTech and low-latency systems, I realized that 'knowing the API' is no longer enough. When you are building a high-throughput system like an order matching engine, you can't just throw a message broker at the architecture and hope it scales. You have to know what happens to the hardware when 50 concurrent threads try to write to the same file at the exact same microsecond.
