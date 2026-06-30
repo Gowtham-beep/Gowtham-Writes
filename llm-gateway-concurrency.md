@@ -56,6 +56,9 @@ Before touching BullMQ, I tested the assumption everyone makes about concurrency
 
 That's not "5 requests slowing each other down." That's **strict serialization** — Ollama was running exactly one generation at a time, no matter how many connections hit it simultaneously. My BullMQ `WORKER_CONCURRENCY` setting was completely irrelevant to this; the bottleneck was one layer further down, invisible from where I was looking.
 
+![Ollama Strict Serialization](assets/storage-engine/ollama_serialize_poof.png)
+*A visual breakdown of how Ollama serializes concurrent requests by default, processing them one at a time.*
+
 So I set `OLLAMA_NUM_PARALLEL=5` and reran the same test:
 
 | Test | Result |
@@ -117,6 +120,9 @@ After all of the above was fixed and independently verified — worker-log count
 | p99 / max latency | ~64.6s |
 | Total batch wall-clock | 212.6s |
 | Peak observed concurrency | 5 (confirmed via two independent measurements) |
+
+![Clean Benchmark Results](assets/storage-engine/benchmarks.png)
+*The final, cross-validated benchmark results showing latency percentiles and total batch processing time.*
 
 Estimated serial-processing time for the same 30 requests, based on mean per-request latency: roughly 1000s (~16.7 minutes). Actual concurrent batch time: 212.6s. That's a real, measured **~4.7x improvement in total batch throughput** — even though, as the curl tests showed, every individual request got slower under the same concurrency setting.
 
