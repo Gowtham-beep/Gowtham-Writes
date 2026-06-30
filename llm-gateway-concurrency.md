@@ -46,7 +46,7 @@ The first thing I verified — before writing a single line of concurrency logic
 
 ## The headline finding: parallelism doesn't create compute, it slices it
 
-Before touching BullMQ, I tested the assumption everyone makes about concurrency: *more parallel requests = more throughput.* I ran this directly against my local Ollama server (Qwen2.5-Coder, 32-core machine), bypassing my whole gateway, with raw `curl`:
+Before touching BullMQ, I tested the assumption everyone makes about concurrency: *more parallel requests = more throughput.* I ran this directly against my local Ollama server (Qwen2.5-Coder, 4-core machine), bypassing my whole gateway, with raw `curl`:
 
 | Test | Result |
 |---|---|
