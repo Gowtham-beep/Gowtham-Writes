@@ -45,10 +45,12 @@ A peer-to-peer file sharing system built using **raw Java sockets and multithrea
 Check out my latest technical deep dives here:
 👉 **[Gowtham Writes](https://github.com/Gowtham-beep/Gowtham-Writes)**
 
-**Latest Post:** [1 Million Messages, 100 Threads, One Bug at Offset 970,898](Claimed%20Is%20Not%20Committed.md)
+**Latest Post:** [My Rate Limiter Told 25 Users to Wait 6.7 Minutes. The Real Wait Was 90 Seconds.](Llm%20gateway%20lab%202.md)
 
 **Previous Posts:**
 
+- [1 Million Messages, 100 Threads, One Bug at Offset 970,898](Claimed%20Is%20Not%20Committed.md)
+- [I Added Concurrency to My LLM Server and Every Request Got Slower (On Purpose)](llm-gateway-concurrency.md)
 - [I Built Kafka's Storage Engine From Scratch. Here's Every Decision I Made](storage-engine.md)
 - [I built a message broker from scratch. Here's what broke me.](mini-kafka.md)
 
